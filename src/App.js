@@ -17,7 +17,7 @@ class App extends Component {
         <Navbar />
         <MainPage />
         {/* <Youtube /> */}
-        <Code />
+        {/* <Code /> */}
         <Article />
         <Meetup />
         <Image />
