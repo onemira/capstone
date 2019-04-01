@@ -1,29 +1,32 @@
 import React, { Component } from 'react'
-import Navbar from './components/Navbar'
-import MainPage from './components/MainPage'
-// import Youtube from './components/Youtube'
-import Code from './components/Code'
-import Article from './components/Article'
-import Meetup from './components/Meetup'
-import Image from './components/Image'
-import Link from './components/Link'
-import File from './components/File'
-import Contact from './components/Contact'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import MainPage from './pages/MainPage'
+import Youtube from './pages/Youtube'
+import Image from './pages/Image'
+import Link from './pages/Link'
+import Code from './pages/Code'
+import Article from './pages/Article'
+import File from './pages/File'
+import Contact from './pages/Contact'
+import Meetup from './pages/Meetup'
 
 class App extends Component {
   render() {
     return (
       <>
-        <Navbar />
-        <MainPage />
-        {/* <Youtube /> */}
-        {/* <Code /> */}
-        <Article />
-        <Meetup />
-        <Image />
-        <Link />
-        <File />
-        <Contact />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={MainPage} />
+            <Route exact path="/Youtube" component={Youtube} />
+            <Route exact path="/File" component={File} />
+            <Route exact path="/Article" component={Article} />
+            <Route exact path="/Code" component={Code} />
+            <Route exact path="/Contact" component={Contact} />
+            <Route exact path="/Image" component={Image} />
+            <Route exact path="/Link" component={Link} />
+            <Route exact path="/Meetup" component={Meetup} />
+          </Switch>
+        </Router>
       </>
     )
   }
