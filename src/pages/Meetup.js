@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 // import Iconbar from '../components/Iconbar'
+import Pagination from '../components/Pagination'
 import Footer from '../components/Footer'
 
 export default class Meetup extends Component {
@@ -10,161 +11,77 @@ export default class Meetup extends Component {
         <Navbar />
         {/* <Iconbar /> */}
         <Footer />
-
-        <div class="container">
-          <div class="row">
-            <ul class="timeline">
-              <li>
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Invitamus me testatur sed quod non dum animae tuae
-                      lacrimis ut libertatem deum rogus aegritudinis causet.
-                      Dicens hoc contra serpentibus isto.
-                    </p>
-                  </div>
-                  <div class="timeline-footer">
-                    <p class="text-right">Feb-21-2014</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="timeline-inverted">
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle invert" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Stranguillione in deinde cepit roseo commendavit patris
-                      super color est se sed. Virginis plus plorantes abscederem
-                      assignato ipsum ait regem Ardalio nos filiae Hellenicus
-                      mihi cum. Theophilo litore in lucem in modo invenit quasi
-                      nomen magni ergo est se est Apollonius, habet clementiae
-                      venit ad nomine sed dominum depressit filia navem.
-                    </p>
-                  </div>
-                  <div class="timeline-footer">
-                    <p class="text-right">Feb-23-2014</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Advenientibus aliorum eam ad per te sed. Facere debetur
-                      aut veneris accedens.
-                    </p>
-                  </div>
-                  <div class="timeline-footer">
-                    <p class="text-right">Feb-23-2014</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="timeline-inverted">
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle invert" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Volvitur ingreditur id ait mea vero cum autem quod ait
-                      Cumque ego illum vero cum unde beata. Commendavi si non
-                      dum est in. Dionysiadem tuos ratio puella ut casus, tunc
-                      lacrimas effunditis magister cives Tharsis. Puellae addita
-                      verbaque' capellam sanctissima quid, apollinem existimas
-                      filiam rex cum autem quod tamen adnuente rediens eam est
-                      se in. Peracta licet ad nomine Maria non ait in modo
-                      compungi mulierem volutpat.
-                    </p>
-                  </div>
-                  <div class="timeline-footer">
-                    <p class="text-right">Feb-27-2014</p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Adfertur guttae sapientiae ducitur est Apollonius ut a a
-                      his domino Lycoridem in lucem. Theophile atque bona dei
-                      cenam veniebant est cum. Iusto opes mihi Tyrum in modo
-                      compungi mulierem ubi augue eiusdem ordo quos vero diam
-                      omni catervis famulorum. Bene dictis ut diem finito servis
-                      unde.
-                    </p>
-                  </div>
-                  <div class="timeline-footer">
-                    <p class="text-right">Mar-01-2014</p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="timeline-inverted">
-                <div class="timeline-badge">
-                  <a>
-                    <i class="fa fa-circle invert" id="" />
-                  </a>
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Timeline Event</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p>
-                      Crede respiciens loco dedit beneficio ad suis alteri si
-                      puella eius in. Acceptis codicello lenonem in deinde
-                      plectrum anni ipsa quod eam est Apollonius.
-                    </p>
-                  </div>
-                  <div class="timeline-footer primary">
-                    <p class="text-right">Mar-02-2014</p>
-                  </div>
-                </div>
-              </li>
-              <li class="clearfix no-float" />
-            </ul>
+        <div class="row mt-4 mb-2 mr-3 ml-3">
+          <div class="col-md-6 col-sm-12">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <h3 class="mb-0">Featured post</h3>
+                <div class="mb-1 text-muted">Nov 12</div>
+                <p class="card-text mb-auto">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+                <a href="#" class="stretched-link">
+                  Continue reading
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg
+                  class="bd-placeholder-img"
+                  width="200"
+                  height="250"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                >
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                    Thumbnail
+                  </text>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">Design</strong>
+                <h3 class="mb-0">Post title</h3>
+                <div class="mb-1 text-muted">Nov 11</div>
+                <p class="mb-auto">
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+                <a href="#" class="stretched-link">
+                  Continue reading
+                </a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <svg
+                  class="bd-placeholder-img"
+                  width="200"
+                  height="250"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMid slice"
+                  focusable="false"
+                  role="img"
+                  aria-label="Placeholder: Thumbnail"
+                >
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+                    Thumbnail
+                  </text>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
+        <Pagination />
       </>
     )
   }

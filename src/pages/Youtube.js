@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Pagination from '../components/Pagination'
 // import Iconbar from '../components/Iconbar'
 
 class Youtube extends Component {
@@ -11,20 +12,13 @@ class Youtube extends Component {
         {/* <Iconbar /> */}
         <Footer />
 
-        <div class="space-medium transparent-background">
+        <div class="space-medium transparent-background mt-5 ">
           <div class="container">
-            <div class="row">
-              <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12 text-center">
-                <div class="section-title" />
-              </div>
-            </div>
             <div class="row">
               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                 <div class="video-testimonial-block">
                   <div class="video">
                     <iframe
-                      // width="560"
-                      // height="315"
                       src="https://www.youtube.com/embed/8aGhZQkoFbQ"
                       frameborder="0"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -67,6 +61,7 @@ class Youtube extends Component {
             </div>
           </div>
         </div>
+        <Pagination />
       </>
     )
   }
