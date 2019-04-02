@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import logo from '../images/logo_cut.png'
 
 class Navbar extends Component {
@@ -9,7 +8,7 @@ class Navbar extends Component {
         <div className="navigation">
           <nav className="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
             <a className="navbar-brand" href="/">
-              <img src={logo} className="logo" />
+              <img src={logo} className="logo" alt="logo" />
             </a>
             {/* <button
             className="navbar-toggler"

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import MainPage from './pages/MainPage'
-import Upload from './pages/Upload'
+import Upload from './components/Upload'
+import Edit from './components/Edit'
 import Youtube from './pages/Youtube'
 import Image from './pages/Image'
 import Link from './pages/Link'
@@ -18,7 +19,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/upload" component={Upload} />
+            <Route exact path="/Upload" component={Upload} />
+            <Route exact path="/Edit/:id" component={Edit} />
             <Route exact path="/Youtube" component={Youtube} />
             <Route exact path="/File" component={File} />
             <Route exact path="/Article" component={Article} />

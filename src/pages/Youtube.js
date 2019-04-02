@@ -27,6 +27,7 @@ class Youtube extends Component {
                 <div className="video-testimonial-block dp-flex justify-content-md-center">
                   <div className="video mr-5">
                     <iframe
+                      title=""
                       width="400px"
                       height="315px"
                       src="https://www.youtube.com/embed/8aGhZQkoFbQ"

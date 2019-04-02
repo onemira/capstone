@@ -16,6 +16,9 @@ body,
   height: 91%;
 }
 
+.jumbotron {
+  background-color: red;
+}
 /* ----icon-navbar---- */
 
 .navbar {

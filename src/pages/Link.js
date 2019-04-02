@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
-// import Iconbar from '../components/Iconbar'
-import Footer from '../components/Footer'
 
 export default class Link extends Component {
   state = {
@@ -11,18 +9,7 @@ export default class Link extends Component {
         description: "the web's most popular icon set and toolkit",
         link: 'https://fontawesome.com/',
         user: 'Mark',
-        created_at: 'Feb 15 2019',
-        delete: <i className="fas fa-trash-alt" />,
-        edit: <i className="fas fa-cut" />
-      },
-      {
-        website_name: 'Hatchful',
-        description: 'Logo Generator',
-        link: 'https://hatchful.shopify.com/',
-        user: 'Shantell',
-        created_at: 'Mar 11 2019',
-        delete: <i className="fas fa-trash-alt" />,
-        edit: <i className="fas fa-cut" />
+        created_at: 'Feb 15 2019'
       },
       {
         website_name: 'Hatchful',
@@ -30,6 +17,13 @@ export default class Link extends Component {
         link: 'https://hatchful.shopify.com/',
         user: 'Shantell',
         created_at: 'Mar 11 2019'
+      },
+      {
+        website_name: 'Unsplash',
+        description: 'Free high-resolution Photos',
+        link: 'https://unsplash.com/',
+        user: 'Shantell',
+        created_at: 'Mar 15 2019'
       },
       {
         website_name: 'PONY',
@@ -53,7 +47,6 @@ export default class Link extends Component {
       <>
         <Navbar />
         {/* <Iconbar /> */}
-        <Footer />
         <section className="jumbotron text-center">
           <div className="container">
             <h1 className="jumbotron-heading"> Devvit Links</h1>
@@ -90,14 +83,8 @@ export default class Link extends Component {
               <th scope="col">Link</th>
               <th scope="col">User</th>
               <th scope="col">Created at</th>
-              <th scope="col">
-                <Link to={'/image'}>
-                  <i className="fas fa-trash-alt" />
-                </Link>
-              </th>
-              <th scope="col">
-                <i className="fas fa-cut" />
-              </th>
+              <th scope="col" />
+              <th scope="col" />
             </tr>
           </thead>
           <tbody>
@@ -112,8 +99,16 @@ export default class Link extends Component {
                 </td>
                 <td>{link.user}</td>
                 <td>{link.created_at}</td>
-                <td>{link.delete}</td>
-                <td>{link.edit}</td>
+                <td>
+                  <a href="/link">
+                    <i className="fas fa-trash-alt" />
+                  </a>
+                </td>
+                <td>
+                  <a href={`/edit/${index}`}>
+                    <i className="fas fa-cut" />
+                  </a>
+                </td>
               </tr>
             ))}
           </tbody>

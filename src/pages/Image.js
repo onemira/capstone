@@ -85,6 +85,7 @@ export default class Image extends Component {
                       border="dark"
                       style={{ width: '350px', height: '350px' }}
                       onClick={toggleLightbox.bind(null, idx)}
+                      alt="img"
                     />
                   )
                 }}
