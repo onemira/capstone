@@ -11,24 +11,26 @@ export default class Meetup extends Component {
         <Navbar />
         {/* <Iconbar /> */}
         <Footer />
-        <div class="row mt-4 mb-2 mr-3 ml-3">
-          <div class="col-md-6 col-sm-12">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <h3 class="mb-0">Featured post</h3>
-                <div class="mb-1 text-muted">Nov 12</div>
-                <p class="card-text mb-auto">
+        <div className="row mt-4 mb-2 mr-3 ml-3">
+          <div className="col-md-6 col-sm-12">
+            <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div className="col p-4 d-flex flex-column position-static">
+                <strong className="d-inline-block mb-2 text-primary">
+                  World
+                </strong>
+                <h3 className="mb-0">Featured post</h3>
+                <div className="mb-1 text-muted">Nov 12</div>
+                <p className="card-text mb-auto">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" class="stretched-link">
+                <a href="#" className="stretched-link">
                   Continue reading
                 </a>
               </div>
-              <div class="col-auto d-none d-lg-block">
+              <div className="col-auto d-none d-lg-block">
                 <svg
-                  class="bd-placeholder-img"
+                  className="bd-placeholder-img"
                   width="200"
                   height="250"
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,23 +48,25 @@ export default class Meetup extends Component {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
-                <h3 class="mb-0">Post title</h3>
-                <div class="mb-1 text-muted">Nov 11</div>
-                <p class="mb-auto">
+          <div className="col-md-6">
+            <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div className="col p-4 d-flex flex-column position-static">
+                <strong className="d-inline-block mb-2 text-success">
+                  Design
+                </strong>
+                <h3 className="mb-0">Post title</h3>
+                <div className="mb-1 text-muted">Nov 11</div>
+                <p className="mb-auto">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" class="stretched-link">
+                <a href="#" className="stretched-link">
                   Continue reading
                 </a>
               </div>
-              <div class="col-auto d-none d-lg-block">
+              <div className="col-auto d-none d-lg-block">
                 <svg
-                  class="bd-placeholder-img"
+                  className="bd-placeholder-img"
                   width="200"
                   height="250"
                   xmlns="http://www.w3.org/2000/svg"

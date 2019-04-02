@@ -5,41 +5,41 @@ export default class Iconbar extends Component {
   render() {
     return (
       <>
-        <div class="screen background-image">
-          <ul class="icon">
+        <div className="screen background-image">
+          <ul className="icon">
             <Link to={'/Link'}>
-              <li class="link">
-                <i class="fas fa-link" />
+              <li className="link">
+                <i className="fas fa-link" />
               </li>
             </Link>
             <Link to={'/Youtube'}>
-              <li class="youtube">
-                <i class="fab fa-youtube-square" />
+              <li className="youtube">
+                <i className="fab fa-youtube-square" />
               </li>
             </Link>
             <Link to={'/Image'}>
-              <li class="image">
-                <i class="far fa-image" />
+              <li className="image">
+                <i className="far fa-image" />
               </li>
             </Link>
             <Link to={'/article'}>
-              <li class="article">
-                <i class="fab fa-medium" />
+              <li className="article">
+                <i className="fab fa-medium" />
               </li>
             </Link>
             <Link to={'/Code'}>
-              <li class="coding">
-                <i class="fas fa-code" />
+              <li className="coding">
+                <i className="fas fa-code" />
               </li>
             </Link>
             <Link to={'/Meetup'}>
-              <li class="meetup">
-                <i class="fab fa-meetup" />
+              <li className="meetup">
+                <i className="fab fa-meetup" />
               </li>
             </Link>
             <Link to={'/File'}>
-              <li class="file">
-                <i class="fas fa-file" />
+              <li className="file">
+                <i className="fas fa-file" />
               </li>
             </Link>
           </ul>

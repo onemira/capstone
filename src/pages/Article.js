@@ -9,24 +9,26 @@ class Article extends Component {
       <>
         <Navbar />
         <Footer />
-        <div class="row mt-4 mb-2">
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <h3 class="mb-0">Featured post</h3>
-                <div class="mb-1 text-muted">Nov 12</div>
-                <p class="card-text mb-auto">
+        <div className="row mt-4 mb-2">
+          <div className="col-md-6">
+            <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div className="col p-4 d-flex flex-column position-static">
+                <strong className="d-inline-block mb-2 text-primary">
+                  World
+                </strong>
+                <h3 className="mb-0">Featured post</h3>
+                <div className="mb-1 text-muted">Nov 12</div>
+                <p className="card-text mb-auto">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" class="stretched-link">
+                <a href="#" className="stretched-link">
                   Continue reading
                 </a>
               </div>
-              <div class="col-auto d-none d-lg-block">
+              <div className="col-auto d-none d-lg-block">
                 <svg
-                  class="bd-placeholder-img"
+                  className="bd-placeholder-img"
                   width="200"
                   height="250"
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,23 +46,25 @@ class Article extends Component {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-              <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-success">Design</strong>
-                <h3 class="mb-0">Post title</h3>
-                <div class="mb-1 text-muted">Nov 11</div>
-                <p class="mb-auto">
+          <div className="col-md-6">
+            <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+              <div className="col p-4 d-flex flex-column position-static">
+                <strong className="d-inline-block mb-2 text-success">
+                  Design
+                </strong>
+                <h3 className="mb-0">Post title</h3>
+                <div className="mb-1 text-muted">Nov 11</div>
+                <p className="mb-auto">
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" class="stretched-link">
+                <a href="#" className="stretched-link">
                   Continue reading
                 </a>
               </div>
-              <div class="col-auto d-none d-lg-block">
+              <div className="col-auto d-none d-lg-block">
                 <svg
-                  class="bd-placeholder-img"
+                  className="bd-placeholder-img"
                   width="200"
                   height="250"
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,17 +83,17 @@ class Article extends Component {
             </div>
           </div>
         </div>
-        <main role="main" class="container">
-          <div class="row">
-            <div class="col-md-8 blog-main">
-              <h3 class="pb-4 mb-4 font-italic border-bottom">
+        <main role="main" className="container">
+          <div className="row">
+            <div className="col-md-8 blog-main">
+              <h3 className="pb-4 mb-4 font-italic border-bottom">
                 From the Firehose
               </h3>
             </div>
 
-            <div class="blog-post">
-              <h2 class="blog-post-title">Sample blog post</h2>
-              <p class="blog-post-meta">
+            <div className="blog-post">
+              <h2 className="blog-post-title">Sample blog post</h2>
+              <p className="blog-post-meta">
                 January 1, 2014 by <a href="#">Mark</a>
               </p>
               <p>
@@ -174,9 +178,9 @@ class Article extends Component {
               </p>
             </div>
 
-            <div class="blog-post">
-              <h2 class="blog-post-title">Another blog post</h2>
-              <p class="blog-post-meta">
+            <div className="blog-post">
+              <h2 className="blog-post-title">Another blog post</h2>
+              <p className="blog-post-meta">
                 December 23, 2013 by <a href="#">Jacob</a>
               </p>
 
@@ -207,12 +211,12 @@ class Article extends Component {
               </p>
             </div>
 
-            <nav class="blog-pagination">
-              <a class="btn btn-outline-primary" href="#">
+            <nav className="blog-pagination">
+              <a className="btn btn-outline-primary" href="#">
                 Older
               </a>
               <a
-                class="btn btn-outline-secondary disabled"
+                className="btn btn-outline-secondary disabled"
                 href="#"
                 tabindex="-1"
                 aria-disabled="true"

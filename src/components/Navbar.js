@@ -6,13 +6,13 @@ class Navbar extends Component {
   render() {
     return (
       <>
-        <div class="navigation">
-          <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">
-              <img src={logo} class="logo" />
+        <div className="navigation">
+          <nav className="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+            <a className="navbar-brand" href="/">
+              <img src={logo} className="logo" />
             </a>
             {/* <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -20,99 +20,102 @@ class Navbar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon" />
+            <span className="navbar-toggler-icon" />
           </button> */}
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link d-flex flex-column mr-auto" href="/">
-                    <i class="fa fa-home fa-2x" />
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item active">
+                  <a className="nav-link d-flex flex-column mr-auto" href="/">
+                    <i className="fa fa-home fa-2x" />
                     Home
-                    <span class="sr-only">(current)</span>
+                    <span className="sr-only">(current)</span>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/link">
-                    <i class="fa fa-link fa-2x">
-                      {/* <span class="badge badge-danger fa-1">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/link">
+                    <i className="fa fa-link fa-2x">
+                      {/* <span className="badge badge-danger fa-1">11</span> */}
                     </i>
                     Link
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/youtube">
-                    <i class="fab fa-youtube fa-2x">
-                      {/* <span class="badge badge-warning">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/youtube">
+                    <i className="fab fa-youtube fa-2x">
+                      {/* <span className="badge badge-warning">11</span> */}
                     </i>
                     Video
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/image">
-                    <i class="fa fa-image fa-2x">
-                      {/* <span class="badge badge-primary">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/image">
+                    <i className="fa fa-image fa-2x">
+                      {/* <span className="badge badge-primary">11</span> */}
                     </i>
                     Image
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/article">
-                    <i class="fab fa-medium fa-2x">
-                      {/* <span class="badge badge-secondary">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/article">
+                    <i className="fab fa-medium fa-2x">
+                      {/* <span className="badge badge-secondary">11</span> */}
                     </i>
                     Article
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/code">
-                    <i class="fa fa-code fa-2x">
-                      {/* <span class="badge badge-info">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/code">
+                    <i className="fa fa-code fa-2x">
+                      {/* <span className="badge badge-info">11</span> */}
                     </i>
                     Code
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/meetup">
-                    <i class="fab fa-meetup fa-2x">
-                      {/* <span class="badge badge-light">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/meetup">
+                    <i className="fab fa-meetup fa-2x">
+                      {/* <span className="badge badge-light">11</span> */}
                     </i>
                     Meetup
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex flex-column" href="/file">
-                    <i class="fa fa-file fa-2x">
-                      {/* <span class="badge badge-success">11</span> */}
+                <li className="nav-item">
+                  <a className="nav-link d-flex flex-column" href="/file">
+                    <i className="fa fa-file fa-2x">
+                      {/* <span className="badge badge-success">11</span> */}
                     </i>
                     File
                   </a>
                 </li>
               </ul>
-              <form class="form-inline my-2 my-lg-2">
+              <form className="form-inline my-2 my-lg-2">
                 <input
-                  class="form-control mr-sm-2"
+                  className="form-control mr-sm-2"
                   type="text"
                   placeholder="Search"
                   aria-label="Search"
                 />
                 <button
-                  class="btn btn-outline-success my-2 my-sm-0 mt-3"
+                  className="btn btn-outline-success my-2 my-sm-0 mt-3"
                   type="submit"
                 >
                   Search
                 </button>
                 <button
-                  class="btn btn-outline-success my-2 my-sm-0 ml-1 mr-1 mt-3"
+                  className="btn btn-outline-success my-2 my-sm-0 ml-1 mr-1 mt-3"
                   type="submit"
                 >
                   <a href="/Upload">Upload</a>
                 </button>
                 <button
                   type="button"
-                  class="btn btn-primary"
+                  className="btn btn-primary"
                   data-toggle="button"
                   aria-pressed="false"
-                  autocomplete="off"
+                  autoComplete="off"
                 >
                   Log in
                 </button>
