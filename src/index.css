@@ -93,6 +93,10 @@ body,
 .article {
   background-color: rgba(245, 240, 240, 0.815);
 }
+
+.nav-link {
+  align-items: center;
+}
 /* ---main-page---- */
 .card {
   display: flex;
@@ -127,6 +131,17 @@ body,
 
 .image-lightbox img {
   margin: 2rem;
+}
+
+.lightbox-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lightbox-container div {
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .lightbox-btn {
@@ -318,6 +333,14 @@ html.lightbox-open {
   left: 0;
 }
 
+/* @media (min-width: 414px) {
+  .navbar-dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+} */
+
 @media (min-width: 768px) {
   .lightbox-btn-right {
     padding-right: 10px;
@@ -455,3 +478,28 @@ html.lightbox-open {
 }
 
 /*# sourceMappingURL=index.css.map*/
+.image-edit-btn {
+  position: absolute;
+  top: 2rem;
+  right: 4.5rem;
+}
+.image-delete-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+/* -----link_table---- */
+.link-table {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+  max-height: 315px;
+  justify-content: center;
+}

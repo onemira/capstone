@@ -68,7 +68,7 @@ export default class Image extends Component {
                   height
                 ) => {
                   return (
-                    <>
+                    <div>
                       <img
                         key={index}
                         src={image.src}
@@ -79,7 +79,7 @@ export default class Image extends Component {
                         alt="img"
                       />
                       <button
-                        className="btn btn-outline-danger"
+                        className="btn btn-light btn-outline-danger image-delete-btn"
                         data-dismiss="modal"
                         type="button"
                         id="del"
@@ -89,7 +89,7 @@ export default class Image extends Component {
                         </a>
                       </button>
                       <button
-                        className="btn btn-outline-warning"
+                        className="btn btn-light btn-outline-warning image-edit-btn"
                         data-dismiss="modal"
                         type="button"
                         id="edit"
@@ -98,7 +98,7 @@ export default class Image extends Component {
                           <i className="fas fa-cut" />
                         </a>
                       </button>
-                    </>
+                    </div>
                   )
                 }}
               />

@@ -66,56 +66,57 @@ export default class Link extends Component {
             </a>
           </li> */}
         </ul>
-
-        <table className="table table-hover ml-6 mr-6">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Website Name</th>
-              <th scope="col">Description</th>
-              <th scope="col">Link</th>
-              <th scope="col">User</th>
-              <th scope="col">Created at</th>
-              <th scope="col" />
-              <th scope="col" />
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.links.map((link, index) => (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td>{link.website_name}</td>
-                <td>{link.description}</td>
-                <td>
-                  <a href={link.link} />
-                  {link.link}
-                </td>
-                <td>{link.user}</td>
-                <td>{link.created_at}</td>
-                <td
-                  className="btn btn-outline-danger"
-                  data-dismiss="modal"
-                  type="button"
-                  id="del"
-                >
-                  <a href="/link">
-                    <i className="fas fa-trash-alt" />
-                  </a>
-                </td>
-                <td
-                  className="btn btn-outline-warning"
-                  data-dismiss="modal"
-                  type="button"
-                  id="edit"
-                >
-                  <a href={`/edit/${index}`}>
-                    <i className="fas fa-cut" />
-                  </a>
-                </td>
+        <div className="table-responsive table-hover link-table">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Link</th>
+                <th scope="col">User</th>
+                <th scope="col">Created at</th>
+                <th scope="col" />
+                <th scope="col" />
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {this.state.links.map((link, index) => (
+                <tr key={index}>
+                  <th scope="row">{index + 1}</th>
+                  <td>{link.website_name}</td>
+                  <td>{link.description}</td>
+                  <td>
+                    <a href={link.link} />
+                    {link.link}
+                  </td>
+                  <td>{link.user}</td>
+                  <td>{link.created_at}</td>
+                  <td
+                    className="btn btn-outline-danger"
+                    data-dismiss="modal"
+                    type="button"
+                    id="del"
+                  >
+                    <a href="/link">
+                      <i className="fas fa-trash-alt" />
+                    </a>
+                  </td>
+                  <td
+                    className="btn btn-outline-warning"
+                    data-dismiss="modal"
+                    type="button"
+                    id="edit"
+                  >
+                    <a href={`/edit/${index}`}>
+                      <i className="fas fa-cut" />
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </>
     )
   }
