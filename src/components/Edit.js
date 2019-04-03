@@ -56,42 +56,6 @@ class Edit extends Component {
               />
             </div>
           </div>
-          {/* <fieldset className="form-group">
-            <div className="row  mt-5 ml-5 mr-5">
-              <legend className="col-form-label col-sm-2 pt-0">
-                Categories
-              </legend>
-              <div className="col-sm-10">
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="gridRadios"
-                    id="gridRadios1"
-                    value="option1"
-                    placeholder="form"
-                    checked
-                  />
-                  <label className="form-check-label" htmlFor="gridRadios1">
-                    Link
-                  </label>
-                </div>
-
-                <div className="form-check ">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="gridRadios"
-                    id="gridRadios2"
-                    value="option2"
-                  />
-                  <label className="form-check-label" htmlFor="gridRadios2">
-                    Video
-                  </label>
-                </div>
-              </div>
-            </div>
-          </fieldset> */}
           <div className="form-group row mt-5 ml-5 mr-5">
             <div className="col-sm-10">
               <button type="submit" className="btn btn-primary">

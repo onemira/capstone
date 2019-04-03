@@ -12,7 +12,7 @@ export default class Iconbar extends Component {
                 <i className="fas fa-link" />
               </li>
             </Link>
-            <Link to={'/Youtube'}>
+            <Link to={'/video'}>
               <li className="youtube">
                 <i className="fab fa-youtube-square" />
               </li>

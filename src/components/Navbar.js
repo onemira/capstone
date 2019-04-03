@@ -42,7 +42,7 @@ class Navbar extends Component {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link d-flex flex-column" href="/youtube">
+                  <a className="nav-link d-flex flex-column" href="/video">
                     <i className="fab fa-youtube fa-2x">
                       {/* <span className="badge badge-warning">11</span> */}
                     </i>

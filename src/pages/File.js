@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 // import Iconbar from '../components/Iconbar'
-import Footer from '../components/Footer'
-import Pagination from '../components/Pagination'
+// import Footer from '../components/Footer'
+// import Pagination from '../components/Pagination'
 
 class File extends Component {
   render() {
@@ -10,7 +10,7 @@ class File extends Component {
       <>
         <Navbar />
         {/* <Iconbar /> */}
-        <Footer />
+        {/* <Footer /> */}
 
         <div className="container">
           <div className="row">
@@ -32,7 +32,7 @@ class File extends Component {
             </div>
           </div>
         </div>
-        <Pagination />
+        {/* <Pagination /> */}
       </>
     )
   }

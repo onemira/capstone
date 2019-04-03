@@ -21,7 +21,7 @@ class App extends Component {
             <Route exact path="/" component={MainPage} />
             <Route exact path="/Upload" component={Upload} />
             <Route exact path="/Edit/:id" component={Edit} />
-            <Route exact path="/Youtube" component={Youtube} />
+            <Route exact path="/Video" component={Youtube} />
             <Route exact path="/File" component={File} />
             <Route exact path="/Article" component={Article} />
             <Route exact path="/Code" component={Code} />

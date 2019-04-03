@@ -51,33 +51,54 @@ export default class Image extends Component {
             <div className="row">
               <div className="col-lg-12 text-center my-2">
                 <h4 className="border-bottom border-dark p-2">
-                  Let Your Sadness Comment Out!<span>😆</span>
+                  <span>Let Your Sadness Comment Out!😆</span>
                   {/* <pre><code>
                     if(sad() === true){spread.stop(); beHappy();}</code></pre> */}
                 </h4>
               </div>
             </div>
-            const App =() =>
-            <div className="row ml-3 mr-3 image-lightbox">
+            <div className="row image-lightbox mx-auto">
               <Lightbox
                 images={this.state.images}
                 renderImageFunc={(
-                  idx,
+                  index,
                   image,
                   toggleLightbox,
                   width,
                   height
                 ) => {
                   return (
-                    <img
-                      key={idx}
-                      src={image.src}
-                      className="rounded"
-                      // border="dark"
-                      style={{ width: '350px', height: '350px' }}
-                      onClick={toggleLightbox.bind(null, idx)}
-                      alt="img"
-                    />
+                    <>
+                      <img
+                        key={index}
+                        src={image.src}
+                        className="rounded"
+                        // border="dark"
+                        style={{ width: '350px', height: '350px' }}
+                        onClick={toggleLightbox.bind(null, index)}
+                        alt="img"
+                      />
+                      <button
+                        className="btn btn-outline-danger"
+                        data-dismiss="modal"
+                        type="button"
+                        id="del"
+                      >
+                        <a href="/image">
+                          <i className="fas fa-trash-alt" />
+                        </a>
+                      </button>
+                      <button
+                        className="btn btn-outline-warning"
+                        data-dismiss="modal"
+                        type="button"
+                        id="edit"
+                      >
+                        <a href={`/edit/${index}`}>
+                          <i className="fas fa-cut" />
+                        </a>
+                      </button>
+                    </>
                   )
                 }}
               />

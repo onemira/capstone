@@ -7,7 +7,7 @@ export default class Link extends Component {
     links: [
       {
         website_name: 'Font Awesome',
-        description: "the web's most popular icon set and toolkit",
+        description: "The Web's Most Popular Icon Set and Toolkit",
         link: 'https://fontawesome.com/',
         user: 'Mark',
         created_at: 'Feb 15 2019'
@@ -21,7 +21,7 @@ export default class Link extends Component {
       },
       {
         website_name: 'Unsplash',
-        description: 'Free high-resolution Photos',
+        description: 'Free High-resolution Photos',
         link: 'https://unsplash.com/',
         user: 'Shantell',
         created_at: 'Mar 15 2019'
@@ -35,7 +35,7 @@ export default class Link extends Component {
       },
       {
         website_name: 'dev.doc',
-        description: '>Developer Documentary',
+        description: 'Programming Language Documentary',
         link: 'https://devdocs.io/',
         user: 'Gavin',
         created_at: 'Mar 29 2019'
@@ -56,15 +56,15 @@ export default class Link extends Component {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/career">
+            <a className="nav-link disabled" href="/career">
               JOBS
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link" href="/etc">
               ETC
             </a>
-          </li>
+          </li> */}
         </ul>
 
         <table className="table table-hover ml-6 mr-6">
@@ -92,12 +92,22 @@ export default class Link extends Component {
                 </td>
                 <td>{link.user}</td>
                 <td>{link.created_at}</td>
-                <td>
+                <td
+                  className="btn btn-outline-danger"
+                  data-dismiss="modal"
+                  type="button"
+                  id="del"
+                >
                   <a href="/link">
                     <i className="fas fa-trash-alt" />
                   </a>
                 </td>
-                <td>
+                <td
+                  className="btn btn-outline-warning"
+                  data-dismiss="modal"
+                  type="button"
+                  id="edit"
+                >
                   <a href={`/edit/${index}`}>
                     <i className="fas fa-cut" />
                   </a>
