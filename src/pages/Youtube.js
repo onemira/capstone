@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Jumbotron from '../components/Jumbotron'
+
 // import Pagination from '../components/Pagination'
 // import Iconbar from '../components/Iconbar'
 
@@ -11,15 +13,7 @@ class Youtube extends Component {
         <Navbar />
         {/* <Iconbar /> */}
         <Footer />
-        <section className="jumbotron text-center">
-          <div className="container">
-            <h1 className="jumbotron-heading"> Devvit Videos</h1>
-            <p className="lead text-muted">
-              Welcome Wizards! Here are something that makes you laugh,
-              something resourceful,and something your folks want to share with!
-            </p>
-          </div>
-        </section>
+        <Jumbotron />
         <div className="space-medium transparent-background">
           <div className="container">
             <div className="row">
@@ -31,12 +25,12 @@ class Youtube extends Component {
                       width="400px"
                       height="315px"
                       src="https://www.youtube.com/embed/8aGhZQkoFbQ"
-                      frameBorder="0"
+                      frameBorder="1"
                       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>
-                  <a href="#" className="video-play" />
+                  <a href="/" className="video-play" />
                 </div>
               </div>
               <div>

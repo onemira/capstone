@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import Jumbotron from '../components/Jumbotron'
 
 class Upload extends Component {
   render() {
     return (
       <>
         <Navbar />
+        <Jumbotron />
         <form>
           <div className="form-group row mt-5 ml-5 mr-5">
             <label for="inputEmail3" className="col-sm-2 col-form-label">

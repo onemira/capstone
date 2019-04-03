@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import Jumbotron from '../components/Jumbotron'
 
 class Edit extends Component {
   componentDidMount = () => {
@@ -11,6 +12,7 @@ class Edit extends Component {
     return (
       <>
         <Navbar />
+        <Jumbotron />
         <form>
           <div className="form-group row mt-5 ml-5 mr-5">
             <label

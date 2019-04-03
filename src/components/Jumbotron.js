@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
+import logo from '../images/logo_cut.png'
 
 export default class jumbotron extends Component {
   render() {
     return (
       <>
-        <section className="jumbotron text-center">
+        <section className="jumbotron text-center ">
           <div className="container">
-            <h1 className="jumbotron-heading"> Devvit </h1>
-            <p className="lead text-muted">
+            {/* <h1 className="jumbotron-heading text-danger"> Devvit </h1> */}
+            <img src={logo} className="logo" alt="logo" />
+            <br />
+            <br />
+            <p className="lead text-light">
               Welcome Wizards! Here are something that makes you laugh,
-              something resourceful,and something your folks want to share with!
+              resourceful,and you folks want to share with!
             </p>
           </div>
         </section>

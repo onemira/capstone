@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
+import Jumbotron from '../components/Jumbotron'
 
 export default class Link extends Component {
   state = {
@@ -46,16 +47,8 @@ export default class Link extends Component {
     return (
       <>
         <Navbar />
+        <Jumbotron />
         {/* <Iconbar /> */}
-        <section className="jumbotron text-center">
-          <div className="container">
-            <h1 className="jumbotron-heading"> Devvit Links</h1>
-            <p className="lead text-muted">
-              Welcome Wizards! Here are something that makes you laugh,
-              something resourceful,and something your folks want to share with!
-            </p>
-          </div>
-        </section>
         <ul className="nav nav-tabs">
           <li className="nav-item">
             <a className="nav-link active" href="/">

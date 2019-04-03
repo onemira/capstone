@@ -17,8 +17,13 @@ body,
 }
 
 .jumbotron {
-  background-color: red;
+  background: url('./images/data.jpg') center center;
+  opacity: 0.85;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 /* ----icon-navbar---- */
 
 .navbar {

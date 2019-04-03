@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Lightbox from 'react-lightbox-component'
+import Jumbotron from '../components/Jumbotron'
 
 export default class Image extends Component {
   state = {
@@ -44,29 +45,19 @@ export default class Image extends Component {
       <>
         <Navbar />
         <Footer />
-
+        <Jumbotron />
         <main role="main">
-          <section className="jumbotron text-center">
-            <div className="container">
-              <h1 className="jumbotron-heading"> Devvit Images</h1>
-              <p className="lead text-muted">
-                Welcome Wizards! Here are something that makes you laugh,
-                something resourceful,and something your folks want to share
-                with!
-              </p>
-            </div>
-          </section>
           <section className="album py-5 bg-light center dp-flex justify-content-md-center">
             <div className="row">
               <div className="col-lg-12 text-center my-2">
                 <h4 className="border-bottom border-dark p-2">
-                  {' '}
-                  Let Your Sadness Comment Out!😆
-                  {/* "if (sad() === true) {spread.stop();beHappy();}" */}
+                  Let Your Sadness Comment Out!<span>😆</span>
+                  {/* <pre><code>
+                    if(sad() === true){spread.stop(); beHappy();}</code></pre> */}
                 </h4>
-                <br />
               </div>
             </div>
+            const App =() =>
             <div className="row ml-3 mr-3 image-lightbox">
               <Lightbox
                 images={this.state.images}
@@ -82,7 +73,7 @@ export default class Image extends Component {
                       key={idx}
                       src={image.src}
                       className="rounded"
-                      border="dark"
+                      // border="dark"
                       style={{ width: '350px', height: '350px' }}
                       onClick={toggleLightbox.bind(null, idx)}
                       alt="img"

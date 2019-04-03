@@ -24,7 +24,7 @@ export default class Meetup extends Component {
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" className="stretched-link">
+                <a href="/" className="stretched-link">
                   Continue reading
                 </a>
               </div>
@@ -60,7 +60,7 @@ export default class Meetup extends Component {
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" className="stretched-link">
+                <a href="/" className="stretched-link">
                   Continue reading
                 </a>
               </div>

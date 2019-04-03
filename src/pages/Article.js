@@ -22,7 +22,7 @@ class Article extends Component {
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" className="stretched-link">
+                <a href="/" className="stretched-link">
                   Continue reading
                 </a>
               </div>
@@ -58,7 +58,7 @@ class Article extends Component {
                   This is a wider card with supporting text below as a natural
                   lead-in to additional content.
                 </p>
-                <a href="#" className="stretched-link">
+                <a href="/" className="stretched-link">
                   Continue reading
                 </a>
               </div>
@@ -104,7 +104,7 @@ class Article extends Component {
 
               <p>
                 Cum sociis natoque penatibus et magnis{' '}
-                <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+                <a href="/">dis parturient montes</a>, nascetur ridiculus mus.
                 Aenean eu leo quam. Pellentesque ornare sem lacinia quam
                 venenatis vestibulum. Sed posuere consectetur est at lobortis.
                 Cras mattis consectetur purus sit amet fermentum.
@@ -181,7 +181,7 @@ class Article extends Component {
             <div className="blog-post">
               <h2 className="blog-post-title">Another blog post</h2>
               <p className="blog-post-meta">
-                December 23, 2013 by <a href="#">Jacob</a>
+                December 23, 2013 by <a href="/">Jacob</a>
               </p>
 
               <p>
