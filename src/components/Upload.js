@@ -58,7 +58,7 @@ class Upload extends Component {
             {/* -----WebsiteName input----- */}
             <div className="form-group row mt-3 ml-5 mr-5">
               <label for="inputName" className="col-sm-2 col-form-label">
-                Website
+                Title
               </label>
               <div className="col-sm-5">
                 <input
@@ -100,20 +100,7 @@ class Upload extends Component {
                 />
               </div>
             </div>
-            {/* -----URL input----- */}
-            <div className="form-group row mt-3 ml-5 mr-5">
-              <label for="inputURL" className="col-sm-2 col-form-label">
-                URL
-              </label>
-              <div className="col-sm-5">
-                <input
-                  type="url"
-                  className="form-control"
-                  id="inputURL"
-                  placeholder="URL"
-                />
-              </div>
-            </div>
+
             {/* -----upload file----- */}
             {/* <div className="form-group row mt-3 ml-5 mr-5">
               <form method="post" action="#" id="#">

@@ -498,8 +498,20 @@ html.lightbox-open {
 
 .videos {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.video {
   max-width: 560px;
   max-height: 315px;
+}
+
+.video-detail {
+  display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
+  flex-direction: row;
 }

@@ -14,45 +14,48 @@ class Edit extends Component {
         <Navbar />
         <Jumbotron />
         <form>
-          <div className="form-group row mt-5 ml-5 mr-5">
-            <label
-              htmlFor="inputWebsiteName"
-              className="col-sm-2 col-form-label"
-            >
-              Website Name
+          {/* -----WebsiteName input----- */}
+          <div className="form-group row mt-3 ml-5 mr-5">
+            <label for="inputName" className="col-sm-2 col-form-label">
+              Title
             </label>
-            <div className="col-sm-4">
+            <div className="col-sm-5">
               <input
-                type="Website name"
+                type="name"
                 className="form-control"
-                id="inputWebsiteName"
-                // placeholder={this.props.link.website_name}
+                id="inputName"
+                placeholder="Website Name"
               />
             </div>
           </div>
-          <div className="form-group row mt-5 ml-5 mr-5">
-            <label htmlFor="inputLink" className="col-sm-2 col-form-label">
-              Link
+          {/* -----URL input----- */}
+          <div className="form-group row mt-3 ml-5 mr-5">
+            <label for="inputURL" className="col-sm-2 col-form-label">
+              URL
             </label>
-            <div className="col-sm-4">
+            <div className="col-sm-5">
               <input
                 type="url"
                 className="form-control"
-                id="inputLink"
-                placeholder="Link"
+                id="inputURL"
+                placeholder="URL"
               />
             </div>
           </div>
-          <div className="form-group row mt-5 ml-5 mr-5">
-            <label htmlFor="inputURL" className="col-sm-2 col-form-label">
-              URL
+          <p className="text-primary ml-5">
+            *SRC URL for image or video uploading
+          </p>
+          {/* ----Description input----- */}
+          <div className="form-group row mt-3 ml-5 mr-5">
+            <label for="inputURL" className="col-sm-2 col-form-label">
+              Description
             </label>
-            <div className="col-sm-4">
+            <div className="col-sm-5">
               <input
-                type="Website name"
+                type="Description"
                 className="form-control"
-                id="inputURL"
-                placeholder="URL"
+                id="inputDescription"
+                placeholder="Description"
               />
             </div>
           </div>

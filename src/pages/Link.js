@@ -71,7 +71,7 @@ export default class Link extends Component {
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Website Name</th>
+                <th scope="col">Title</th>
                 <th scope="col">Description</th>
                 <th scope="col">Link</th>
                 <th scope="col">User</th>
@@ -87,8 +87,7 @@ export default class Link extends Component {
                   <td>{link.website_name}</td>
                   <td>{link.description}</td>
                   <td>
-                    <a href={link.link} />
-                    {link.link}
+                    <a href={link.link}>{link.link}</a>
                   </td>
                   <td>{link.user}</td>
                   <td>{link.created_at}</td>

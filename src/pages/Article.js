@@ -94,7 +94,7 @@ class Article extends Component {
             <div className="blog-post">
               <h2 className="blog-post-title">Sample blog post</h2>
               <p className="blog-post-meta">
-                January 1, 2014 by <a href="#">Mark</a>
+                January 1, 2014 by <a href="/">Mark</a>
               </p>
               <p>
                 This blog post shows a few different types of content that’s
@@ -186,7 +186,7 @@ class Article extends Component {
 
               <p>
                 Cum sociis natoque penatibus et magnis{' '}
-                <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+                <a href="/">dis parturient montes</a>, nascetur ridiculus mus.
                 Aenean eu leo quam. Pellentesque ornare sem lacinia quam
                 venenatis vestibulum. Sed posuere consectetur est at lobortis.
                 Cras mattis consectetur purus sit amet fermentum.
@@ -212,12 +212,12 @@ class Article extends Component {
             </div>
 
             <nav className="blog-pagination">
-              <a className="btn btn-outline-primary" href="#">
+              <a className="btn btn-outline-primary" href="/">
                 Older
               </a>
               <a
                 className="btn btn-outline-secondary disabled"
-                href="#"
+                href="/"
                 tabindex="-1"
                 aria-disabled="true"
               >

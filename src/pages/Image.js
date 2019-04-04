@@ -8,34 +8,51 @@ export default class Image extends Component {
   state = {
     images: [
       {
+        user: 'Jordan',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FHEUD6EHL/655ab26acda49d933e8c8ecf429ab3367e7811bd61ea7d1ce1c3b46a6db78881_1.jpg.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FHEUD6EHL/655ab26acda49d933e8c8ecf429ab3367e7811bd61ea7d1ce1c3b46a6db78881_1.jpg.jpg',
+        description: 'lol'
       },
       {
+        user: 'Kento',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FH540TF5J/img_0711.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FH540TF5J/img_0711.jpg',
+        description: 'Cohort xiii!!!'
       },
       {
-        src: 'https://files.slack.com/files-pri/T7HH5AJ56-FGU1076CW/e09b2c8.jpg'
-      },
-      {
+        user: 'Katherine',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FF8ECPRG8/image_from_ios.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FGU1076CW/e09b2c8.jpg',
+        description: 'dev life'
       },
       {
+        user: 'Will',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FEJ0AHZ6D/image_from_ios.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FF8ECPRG8/image_from_ios.jpg',
+        description: 'dev life'
       },
       {
+        user: 'Angie',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FEXA5BBBQ/image_from_ios.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FEJ0AHZ6D/image_from_ios.jpg',
+        description: 'dev life'
       },
       {
+        user: 'Katherine',
         src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FESSZ1ZSQ/image_from_ios.jpg'
+          'https://files.slack.com/files-pri/T7HH5AJ56-FEXA5BBBQ/image_from_ios.jpg',
+        description: 'dev life'
       },
       {
-        src: 'https://files.slack.com/files-pri/T7HH5AJ56-FGFLSG3RC/image.png'
+        user: 'Katherine',
+        src:
+          'https://files.slack.com/files-pri/T7HH5AJ56-FESSZ1ZSQ/image_from_ios.jpg',
+        description: 'dev life'
+      },
+      {
+        user: 'Katherine',
+        src: 'https://files.slack.com/files-pri/T7HH5AJ56-FGFLSG3RC/image.png',
+        description: 'dev life'
       }
     ]
   }
@@ -51,14 +68,18 @@ export default class Image extends Component {
             <div className="row">
               <div className="col-lg-12 text-center my-2">
                 <h4 className="border-bottom border-dark p-2">
-                  <span>Let Your Sadness Comment Out!😆</span>
+                  Let Your Sadness Comment Out!
+                  <span role="img" aria-label="smile">
+                    😆
+                  </span>
                   {/* <pre><code>
                     if(sad() === true){spread.stop(); beHappy();}</code></pre> */}
                 </h4>
               </div>
             </div>
-            <div className="row image-lightbox mx-auto">
+            <div key={this.state.images} className="row image-lightbox mx-auto">
               <Lightbox
+                key={this.state.images}
                 images={this.state.images}
                 renderImageFunc={(
                   index,
@@ -68,7 +89,7 @@ export default class Image extends Component {
                   height
                 ) => {
                   return (
-                    <div>
+                    <>
                       <img
                         key={index}
                         src={image.src}
@@ -98,7 +119,9 @@ export default class Image extends Component {
                           <i className="fas fa-cut" />
                         </a>
                       </button>
-                    </div>
+                      <p>{image.user}</p>
+                      <p>{image.description}</p>
+                    </>
                   )
                 }}
               />
