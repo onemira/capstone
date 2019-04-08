@@ -103,15 +103,15 @@ class Navbar extends Component {
                 >
                   Search
                 </button>
-                <button
+                {/* <button
                   className="btn btn-outline-success my-2 my-sm-0 ml-1 mr-1 mt-3"
                   type="submit"
                 >
                   <a href="/Upload">Upload</a>
-                </button>
+                </button> */}
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-primary ml-1"
                   data-toggle="button"
                   aria-pressed="false"
                   autoComplete="off"

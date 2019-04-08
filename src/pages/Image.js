@@ -1,98 +1,65 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+
+// import Footer from '../components/Footer'
 import Lightbox from 'react-lightbox-component'
 import Jumbotron from '../components/Jumbotron'
 
 export default class Image extends Component {
   state = {
-    images: [
-      {
-        user: 'Jordan',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FHEUD6EHL/655ab26acda49d933e8c8ecf429ab3367e7811bd61ea7d1ce1c3b46a6db78881_1.jpg.jpg',
-        description: 'lol'
-      },
-      {
-        user: 'Kento',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FH540TF5J/img_0711.jpg',
-        description: 'Cohort xiii!!!'
-      },
-      {
-        user: 'Katherine',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FGU1076CW/e09b2c8.jpg',
-        description: 'dev life'
-      },
-      {
-        user: 'Will',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FF8ECPRG8/image_from_ios.jpg',
-        description: 'dev life'
-      },
-      {
-        user: 'Angie',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FEJ0AHZ6D/image_from_ios.jpg',
-        description: 'dev life'
-      },
-      {
-        user: 'Katherine',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FEXA5BBBQ/image_from_ios.jpg',
-        description: 'dev life'
-      },
-      {
-        user: 'Katherine',
-        src:
-          'https://files.slack.com/files-pri/T7HH5AJ56-FESSZ1ZSQ/image_from_ios.jpg',
-        description: 'dev life'
-      },
-      {
-        user: 'Katherine',
-        src: 'https://files.slack.com/files-pri/T7HH5AJ56-FGFLSG3RC/image.png',
-        description: 'dev life'
-      }
-    ]
+    images: []
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:3000/api/images').then(response => {
+      this.setState({ images: response.data })
+    })
   }
 
   render() {
     return (
       <>
         <Navbar />
-        <Footer />
+        {/* <Footer /> */}
         <Jumbotron />
-        <main role="main">
-          <section className="album py-5 bg-light center dp-flex justify-content-md-center">
-            <div className="row">
-              <div className="col-lg-12 text-center my-2">
-                <h4 className="border-bottom border-dark p-2">
-                  Let Your Sadness Comment Out!
-                  <span role="img" aria-label="smile">
-                    😆
-                  </span>
-                  {/* <pre><code>
+
+        {/* <main role="main"> */}
+        <section className="album py-5 bg-light center dp-flex justify-content-md-center">
+          <div className="row">
+            <div className="col-lg-12 text-center my-2">
+              <h4 className="border-bottom border-dark p-2">
+                <Link className="btn btn-warning mr-5" to="/images/upload">
+                  {' '}
+                  Upload{' '}
+                </Link>
+                Let Your Sadness Comment Out!
+                <span role="img" aria-label="smile">
+                  😆
+                </span>
+                {/* <pre><code>
                     if(sad() === true){spread.stop(); beHappy();}</code></pre> */}
-                </h4>
-              </div>
+              </h4>
             </div>
-            <div key={this.state.images} className="row image-lightbox mx-auto">
-              <Lightbox
-                key={this.state.images}
-                images={this.state.images}
-                renderImageFunc={(
-                  index,
-                  image,
-                  toggleLightbox,
-                  width,
-                  height
-                ) => {
-                  return (
-                    <>
+          </div>
+          <div key={this.state.images} className="row image-lightbox mx-auto">
+            <Lightbox
+              key={this.state.images}
+              images={this.state.images}
+              renderImageFunc={(
+                index,
+                image,
+                toggleLightbox,
+                width,
+                height
+              ) => {
+                return (
+                  <>
+                    <div className="d-flex flex-column">
                       <img
                         key={index}
-                        src={image.src}
+                        src={image.url}
                         className="rounded"
                         // border="dark"
                         style={{ width: '350px', height: '350px' }}
@@ -119,15 +86,14 @@ export default class Image extends Component {
                           <i className="fas fa-cut" />
                         </a>
                       </button>
-                      <p>{image.user}</p>
-                      <p>{image.description}</p>
-                    </>
-                  )
-                }}
-              />
-            </div>
-          </section>
-        </main>
+                    </div>
+                  </>
+                )
+              }}
+            />
+          </div>
+        </section>
+        {/* </main> */}
         {/* <Pagination /> */}
       </>
     )

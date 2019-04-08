@@ -1,37 +1,36 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import Jumbotron from '../components/Jumbotron'
+
+// import Footer from '../components/Footer'
 // import Pagination from '../components/Pagination'
 // import Iconbar from '../components/Iconbar'
 
 class Youtube extends Component {
   state = {
-    videos: [
-      {
-        user: 'Mark',
-        src: 'https://www.youtube.com/embed/8aGhZQkoFbQ',
-        description: 'event loop'
-      },
-      {
-        user: 'Mark',
-        src: 'https://www.youtube.com/embed/uddZX9ZK6wY',
-        description: ' New DevTools'
-      },
-      {
-        user: 'Mark',
-        src: 'https://www.youtube.com/embed/XKu_SEDAykw',
-        description: 'How to work at Google'
-      }
-    ]
+    videos: []
   }
+
+  componentDidMount() {
+    axios.get('http://localhost:3000/api/videos').then(response => {
+      this.setState({ videos: response.data })
+    })
+  }
+
   render() {
     return (
       <>
         <Navbar />
         {/* <Iconbar /> */}
-        <Footer />
+        {/* <Footer /> */}
         <Jumbotron />
+        <Link className="btn btn-dark mx-auto width-200px" to="/videos/upload">
+          {' '}
+          Upload{' '}
+        </Link>
         <div className="space-medium transparent-background">
           {this.state.videos.map(video => (
             <div className="video-testimonial-block videos">
@@ -39,20 +38,18 @@ class Youtube extends Component {
                 <iframe
                   className="embed-responsive-item"
                   title="videos"
-                  // max-width="560px"
-                  // max-height="315px"
-                  src={video.src}
+                  src={video.url}
                   description={video.description}
                   frameBorder="1"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
-              {/* <a href="/" className="video-play" /> */}
+
               {/* ------delete & edit btn--- */}
               <div className="video-detail">
-                <p>{video.user}</p>
-                <p>{video.description}</p>
+                {/* <p>{video.name}</p>
+                <p>{video.description}</p> */}
                 <button
                   className="btn btn-light btn-outline-danger video-delete-btn"
                   data-dismiss="modal"
@@ -77,7 +74,6 @@ class Youtube extends Component {
             </div>
           ))}
         </div>
-        {/* <Pagination /> */}
       </>
     )
   }
