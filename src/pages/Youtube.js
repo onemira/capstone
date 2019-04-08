@@ -5,19 +5,24 @@ import axios from 'axios'
 import Navbar from '../components/Navbar'
 import Jumbotron from '../components/Jumbotron'
 
-// import Footer from '../components/Footer'
-// import Pagination from '../components/Pagination'
-// import Iconbar from '../components/Iconbar'
-
 class Youtube extends Component {
   state = {
-    videos: []
+    videos: [],
+    video: {}
   }
 
   componentDidMount() {
     axios.get('http://localhost:3000/api/videos').then(response => {
       this.setState({ videos: response.data })
     })
+  }
+
+  deleteVideo = event => {
+    axios
+      .delete(`http://localhost:3000/api/videos/${this.state.video.id}`)
+      .then(response => {
+        this.props.history.push('/')
+      })
   }
 
   render() {
@@ -50,26 +55,32 @@ class Youtube extends Component {
               <div className="video-detail">
                 {/* <p>{video.name}</p>
                 <p>{video.description}</p> */}
-                <button
-                  className="btn btn-light btn-outline-danger video-delete-btn"
-                  data-dismiss="modal"
-                  type="button"
-                  id="del"
-                >
-                  <a href="/">
-                    <i className="fas fa-trash-alt" />
-                  </a>
-                </button>
-                <button
-                  className="btn btn-light btn-outline-warning video-edit-btn"
-                  data-dismiss="modal"
-                  type="button"
-                  id="edit"
-                >
-                  <a href="/">
-                    <i className="fas fa-cut" />
-                  </a>
-                </button>
+                <div className="deleteVideo">
+                  <button
+                    className="btn btn-light btn-outline-danger video-delete-btn"
+                    data-dismiss="modal"
+                    type="button"
+                    id="del"
+                    onClick={this.deleteVideo}
+                  >
+                    <a href="/">
+                      <i className="fas fa-trash-alt" />
+                    </a>
+                  </button>
+                </div>
+                <Link to="/videos/edit">
+                  <button
+                    className="btn btn-light btn-outline-warning video-edit-btn"
+                    data-dismiss="modal"
+                    type="button"
+                    id="edit"
+                    onClick={this.EditVideo}
+                  >
+                    <a href="/">
+                      <i className="fas fa-cut" />
+                    </a>
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
